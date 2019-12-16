@@ -1,0 +1,7 @@
+(library
+ (name day2_lib)
+ (libraries
+  async
+  base)
+ (inline_tests)
+ (preprocess (pps ppx_jane)))

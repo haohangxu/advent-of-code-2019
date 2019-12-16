@@ -1,0 +1,6 @@
+(executables
+ (names main)
+ (libraries
+  async
+  base
+  day2_lib))
