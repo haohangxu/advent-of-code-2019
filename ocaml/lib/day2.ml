@@ -1,12 +1,6 @@
 open! Core
-
-module Common = struct
-  let filename_param =
-    let open Command.Param in
-    anon ("filename" %: string)
-  ;;
-end
-
+open! Std_internal
+  
 module Intcode = struct
   module Op = struct
     type t =
@@ -68,7 +62,7 @@ module Part1 = struct
   let command =
     Command.basic
       ~summary:"Part 1 command"
-      (Command.Param.map Common.filename_param ~f:(fun filename ->
+      (Command.Param.map filename_param ~f:(fun filename ->
            (fun () ->
              let input = Stdio.In_channel.read_lines filename in
              assert (List.length input = 1);
@@ -96,8 +90,8 @@ module Part2 = struct
       flag "target" (required int) ~doc:"INT target output"
     in
     Command.basic
-      ~summary:"Part 1 command"
-      (Command.Param.map2 Common.filename_param target_param ~f:(fun filename target ->
+      ~summary:"Part 2 command"
+      (Command.Param.map2 filename_param target_param ~f:(fun filename target ->
            (fun () ->
              let input = Stdio.In_channel.read_lines filename in
              assert (List.length input = 1);

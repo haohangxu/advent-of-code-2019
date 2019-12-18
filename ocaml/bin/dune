@@ -3,4 +3,4 @@
  (libraries
   async
   base
-  day2_lib))
+  lib))
