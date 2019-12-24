@@ -113,7 +113,7 @@ end
 module Part2 = struct
   let command =
     Command.basic
-      ~summary:"Part 1 command"
+      ~summary:"Part 2 command"
       (Command.Param.map filename_param ~f:(fun filename ->
            (fun () ->
              let input = Stdio.In_channel.read_lines filename in
