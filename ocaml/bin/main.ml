@@ -11,6 +11,7 @@ let command =
     ; "day6", Day6.command
     ; "day7", Day7.command
     ; "day8", Day8.command
+    ; "day9", Day9.command
     ]
 ;;
 
