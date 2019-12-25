@@ -51,7 +51,7 @@ module Common = struct
     test 112233;
     [%expect {| true |}];
     test 111122;
-    [%expect {| false |}];
+    [%expect {| true |}];
     test 123444;
     [%expect {| false |}]
   ;;
@@ -111,7 +111,7 @@ module Part2 = struct
     Core.printf "%b\n%!" (fits_criteria 123444);
     [%expect {| false |}];
     Core.printf "%b\n%!" (fits_criteria 111122);
-    [%expect {| false |}]
+    [%expect {| true |}]
   ;;
   
   let command =
