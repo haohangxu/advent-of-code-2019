@@ -15,17 +15,6 @@ module Sign = struct
     | _ -> assert false
 end
             
-module Coord = struct
-  type t =
-    { row : int
-    ; col : int
-    } [@@deriving sexp_of, compare]
-
-  let dist a b =
-    (abs (a.row - b.row)) + (abs (a.col - b.col))
-  ;;
-end
-
 module Quadrant = struct
   type t =
     | I
